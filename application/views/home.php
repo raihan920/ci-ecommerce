@@ -86,11 +86,12 @@
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="<?php echo base_url();?>master/accounts.java"><i class="fa fa-user"></i> Account</a></li>
+                                    <li><a href="<?php echo base_url();?>home/accounts"><i class="fa fa-user"></i> Account</a></li>
                                     <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                     <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                    <li><a href="<?php echo base_url().'admin';?>"><i class="fa fa-lock"></i>Admin Login</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -146,10 +147,8 @@
         <section id="slider"><!--slider-->
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">                        
-
+                    <div class="col-sm-12">
                         <?php echo $slider; ?>
-                        
                     </div>
                 </div>
             </div>
@@ -298,10 +297,8 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-9 padding-right">
-                        
+                    <div class="col-sm-9 padding-right">                        
                         <?php echo $featuredItems;?>
-
                         <div class="category-tab"><!--category-tab-->
                             <div class="col-sm-12">
                                 <ul class="nav nav-tabs">

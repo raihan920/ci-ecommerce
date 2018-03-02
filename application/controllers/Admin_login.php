@@ -32,14 +32,10 @@ class Admin_login extends CI_Controller {
         $user_password = $this->input->post('password', TRUE); //coming from form            
         //$enc_password = md5($user_password); //encrypting password
         //$hash_password = password_hash($user_password, PASSWORD_DEFAULT); //password_hash is better than md5
-
         $this->load->model('admin_model'); //connecting or loading model
-
-        $user_detail = $this->admin_model->get_user_detail($user_email); //getting data from model
-        
-        if(!isset($this->session->user_email)){ //if session does not have any email address
-                        
-            if (password_verify($user_password, $user_detail->user_password)) { //this is a built in function of php
+        $user_detail = $this->admin_model->get_user_detail($user_email); //getting data from model        
+        if(!isset($this->session->user_email)){ //if session does not have any email address                        
+            if (password_verify($user_password, $user_detail->user_password)) { //this is a built in function of php //matching password
                 if($user_detail->user_status == 1){ //check if the user is active
                     $session_data['user_id'] =  $user_detail->user_id;
                     $session_data['user_email'] =  $user_detail->user_email;
@@ -54,8 +50,7 @@ class Admin_login extends CI_Controller {
             } else {
                 $data['error_message'] = 'Wrong User Name or Password';
                 $this->load->view('admin/admin_login', $data);                    
-            }
-            
+            }            
         }elseif (isset ($this->session->user_email)) { //session has an email address
             redirect('admin-dashboard');
         }        
