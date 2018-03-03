@@ -32,6 +32,7 @@ class Admin_login extends CI_Controller {
         $user_password = $this->input->post('password', TRUE); //coming from form            
         //$enc_password = md5($user_password); //encrypting password
         //$hash_password = password_hash($user_password, PASSWORD_DEFAULT); //password_hash is better than md5
+        
         $this->load->model('admin_model'); //connecting or loading model
         $user_detail = $this->admin_model->get_user_detail($user_email); //getting data from model        
         if(!isset($this->session->user_email)){ //if session does not have any email address                        

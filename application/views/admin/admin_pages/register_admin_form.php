@@ -1,3 +1,20 @@
+<?php
+if(isset($success_message)){
+?>
+<div class="alert alert-success fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <?php echo $success_message;?>
+</div>
+<?php
+}elseif(validation_errors()==TRUE){
+?>
+<div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <?php echo validation_errors(); //showing validation errors ?>
+</div>   
+<?php    
+}
+?>
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
@@ -9,42 +26,48 @@
             </div>
         </div>
         <div class="box-content">
-            <form class="form-horizontal">
+<!--            <form class="form-horizontal" action="">-->
+                <?php echo form_open('admin/register_new_admin','class=form-horizontal'); //first parameter = action, second parameter = class-name?>
                 <fieldset>
                     <div class="control-group">
-                        <label class="control-label" for="typeahead">Auto complete </label>
+                        <label class="control-label" for="admin-name">Admin Name</label>
                         <div class="controls">
-                            <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
-                            <p class="help-block">Start typing to activate auto complete!</p>
+                            <input type="text" name="user_name" value="<?php echo set_value('user_name'); //if there is any value from previous submit it will show here?>" class="span6 typeahead" id="admin-name" required />
+                            <small style="color: red;"> <?php echo form_error('user_name'); //showing individual error?> </small>
                         </div>
                     </div>
+                    
                     <div class="control-group">
-                        <label class="control-label" for="date01">Date input</label>
+                        <label class="control-label" for="admin-email">Admin Email</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
+                            <input type="email" name="user_email" value="<?php echo set_value('user_email'); //if there is any value from previous submit it will show here?>" class="span6 typeahead" id="admin-email" required />
+                            <small style="color: red;"> <?php echo form_error('user_email'); //showing individual error?> </small>
                         </div>
                     </div>
-
+                    
                     <div class="control-group">
-                        <label class="control-label" for="fileInput">File input</label>
+                        <label class="control-label" for="admin-password">Admin Password</label>
                         <div class="controls">
-                            <input class="input-file uniform_on" id="fileInput" type="file">
-                        </div>
-                    </div>          
-                    <div class="control-group hidden-phone">
-                        <label class="control-label" for="textarea2">Textarea WYSIWYG</label>
-                        <div class="controls">
-                            <textarea class="cleditor" id="textarea2" rows="3"></textarea>
+                            <input type="password" name="user_password" class="span6 typeahead" id="admin-password" required />
+                            <small style="color: red;"> <?php echo form_error('user_password'); //showing individual error?> </small>
                         </div>
                     </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="confirm-password">Confirm Password</label>
+                        <div class="controls">
+                            <input type="password" name="confirm_password" class="span6 typeahead" id="confirm-password" required />
+                            <small style="color: red;"> <?php echo form_error('confirm_password'); //showing individual error?> </small>
+                        </div>
+                    </div>
+                    
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Save changes</button>
                         <button type="reset" class="btn">Cancel</button>
                     </div>
                 </fieldset>
-            </form>   
-
+<!--            </form>-->
+                <?php echo form_close(); ?>           
         </div>
     </div><!--/span-->
-
 </div><!--/row-->
