@@ -321,7 +321,7 @@
                         <ul class="nav nav-tabs nav-stacked main-menu">
                             <li><a href="<?php echo base_url().'admin-dashboard';?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
                             <li><a href="<?php echo base_url().'register-admin';?>"><i class="icon-edit"></i><span class="hidden-tablet"> Register Admin</span></a></li>
-                            <li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
+                            <li><a href="<?php echo base_url().'add-product'?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Products</span></a></li>
                             <li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
                             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
                             <li>

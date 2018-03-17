@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['add-product'] = 'products/show_add_product_form';
+
 $route['register-admin'] = 'admin/show_admin_register_form'; // are used to make url's look good
 $route['admin-logout'] = 'admin_login/check_admin_logout'; // are used to make url's look good
 $route['admin-dashboard'] = 'admin/show_dashboard'; // are used to make url's look good
