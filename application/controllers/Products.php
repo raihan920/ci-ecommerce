@@ -6,6 +6,11 @@ class Products extends CI_Controller{
     }
     
     public function show_add_product_form(){
-        echo 'inside show_add_product_form';
+        $data['admin_main_content'] = $this->load->view('admin/admin_pages/add_product_form.php','', TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+    
+    public function save_product(){
+        
     }
 }
