@@ -13,23 +13,23 @@
             <?php echo form_open('products/save_product', 'class=form-horizontal'); //first parameter = action, second parameter = class-name?>
             <fieldset>
                 <div class="control-group">
-                    <label class="control-label" for="admin-name">Category Name</label>
+                    <label class="control-label" for="category-name">Category Name</label>
                     <div class="controls">
-                        <input type="text" name="category_name" value="" class="span6 typeahead" id="admin-name" required />                            
+                        <input type="text" name="category_name" value="" class="span6 typeahead" id="category-name" required />                            
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="admin-email">Category Short Description</label>
+                    <label class="control-label" for="short-desc">Category Short Description</label>
                     <div class="controls">
-                        <input type="email" name="category_short_desc" value="" class="span6 typeahead" id="admin-email" required />
+                        <input type="text" name="category_short_desc" value="" class="span6 typeahead" id="short-desc" required />
                     </div>
                 </div>
 
                 <div class="control-group hidden-phone">
-                    <label class="control-label" for="textarea2">Category Long Description</label>
+                    <label class="control-label" for="long-desc">Category Long Description</label>
                     <div class="controls">
-                        <textarea class="cleditor" id="textarea2" rows="3" name="category_long_desc"></textarea>
+                        <textarea class="cleditor" name="category_long_desc" id="long-desc" rows="3"></textarea>
                     </div>
                 </div>
                 
