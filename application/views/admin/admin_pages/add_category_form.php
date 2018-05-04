@@ -1,7 +1,7 @@
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
-            <h2><i class="halflings-icon edit"></i><span class="break"></span>Form Elements</h2>
+            <h2><i class="halflings-icon edit"></i><span class="break"></span>Add New Category</h2>
             <div class="box-icon">
                 <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
                 <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
@@ -10,7 +10,7 @@
         </div>
         <div class="box-content">
             <!--<form class="form-horizontal" action="">-->
-            <?php echo form_open('products/save_product', 'class=form-horizontal'); //first parameter = action, second parameter = class-name?>
+            <?php echo form_open('products/save_category', 'class=form-horizontal'); //first parameter = action, second parameter = class-name?>
             <fieldset>
                 <div class="control-group">
                     <label class="control-label" for="category-name">Category Name</label>
