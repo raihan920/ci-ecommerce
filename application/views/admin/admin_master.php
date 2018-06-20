@@ -322,7 +322,7 @@
                             <li><a href="<?php echo base_url().'admin-dashboard';?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
                             <li><a href="<?php echo base_url().'register-admin';?>"><i class="icon-edit"></i><span class="hidden-tablet"> Register Admin</span></a></li>
                             <li><a href="<?php echo base_url().'add-category'?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Category</span></a></li>
-                            <li><a href="<?php echo base_url().'all-category'?>"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Category</span></a></li>
+                            <li><a href="<?php echo base_url().'all-category'?>"><i class="icon-eye-open"></i><span class="hidden-tablet"> Manage Category</span></a></li>
                             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
                             <li>
                                 <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>

@@ -50,6 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+
+$route['edit-category/(.+)'] = 'products/edit_category/$1';
+$route['change-category-status/(.+)/(.+)'] = 'products/change_category_status/$1/$2'; //(:any) can be used in place of (.+) //dollar one
+//if you need to pass more than one veriable then use another /(.+) on left and /$2 on right and so on
 $route['all-category'] = 'products/show_all_category';
 $route['add-category'] = 'products/show_add_category_form';
 
