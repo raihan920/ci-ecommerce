@@ -33,5 +33,16 @@ class Products_model extends CI_Model{
         unset($data['category_id']);
         $this->db->where('category_id', $category_id)->update('tbl_category', $data);     
     }
+    
+    public function get_all_active_category(){
+        $result = $this->db->select('*')->from('tbl_category')->where('category_status', 1)->get()->result();
+        return $result;        
+    }
+    
+    public function save_product(){
+        $product_data = $this->input->post(NULL, TRUE);
+        $product_data['product_status'] = 1;
+        $this->db->insert('tbl_product', $product_data);
+    }
 }
 

@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['add-product'] = 'products/add_product';
 
 $route['edit-category/(.+)'] = 'products/edit_category/$1';
 $route['change-category-status/(.+)/(.+)'] = 'products/change_category_status/$1/$2'; //(:any) can be used in place of (.+) //dollar one

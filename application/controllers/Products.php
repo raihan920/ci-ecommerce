@@ -38,4 +38,16 @@ class Products extends CI_Controller{
         $this->products_model->update_category();
         redirect('all-category');
     }
+    
+    public function add_product(){
+        $data['category_info'] = $this->products_model->get_all_active_category();
+        $data['admin_main_content'] = $this->load->view('admin/admin_pages/add_product_form', $data, TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+    
+    public function save_product(){
+        $this->products_model->save_product();
+        $this->session->set_userdata('message', 'Product saved successfully');
+        $this->add_product();
+    }
 }
